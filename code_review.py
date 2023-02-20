@@ -21,7 +21,7 @@ driver = webdriver.Chrome(options=options)
 URL = "https://www.agoda.com/en-gb/search?city=17193&checkIn=2023-03-03&los=14&rooms=1&adults=2&children=0&cid=1891458&locale=en-gb&ckuid=9cdf223f-a3ce-4890-965a-b2aab1ae50d6&prid=0&gclid=Cj0KCQjwqc6aBhC4ARIsAN06NmOZjaRodGcrUeKINOPnKgTZEfVb8z7hDSCrkddzvLoQZA07tdLlcnsaAg2qEALw_wcB&currency=GBP&correlationId=d880d555-ceda-41ba-b708-41c298e4db9b&pageTypeId=1&realLanguageId=16&languageId=1&origin=GB&tag=24bd4b3f-b6a1-50d5-e639-d9c49ca41c49&userId=9cdf223f-a3ce-4890-965a-b2aab1ae50d6&whitelabelid=1&loginLvl=0&storefrontId=3&currencyId=2&currencyCode=GBP&htmlLanguage=en-gb&cultureInfoName=en-gb&machineName=am-pc-4f-acm-web-user-7d974b9749-vw7ck&trafficGroupId=5&sessionId=ug4znrtc3dsxzbtr2i4zpami&trafficSubGroupId=122&aid=82361&useFullPageLogin=true&cttp=4&isRealUser=true&mode=production&checkOut=2023-03-17&priceCur=GBP&textToSearch=Bali&productType=-1&travellerType=1&familyMode=off"
 driver.get(URL)
 
-
+# todo: 2 lines space for new class 
 class Scraper:
     """This class contains different methods that work together to scrape certain information from a given website"""
 
@@ -48,9 +48,11 @@ class Scraper:
             )
             accept_cookies_button.click()
         except:
+            # todo: use specified exception type. 
             pass  # If there is no cookies button, we won't find it, so we can pass
 
     def top_reviewed(self) -> None:
+        # todo: if no class referenced, method could be a function
         """This method clicks the top review tab, so only top reviewed hotels are displayed."""
         time.sleep(2)
         review_bar = driver.find_element(
@@ -60,6 +62,7 @@ class Scraper:
         time.sleep(2)
 
     def scroller(self) -> None:
+        # todo: if no class referenced, method could be a function
         time.sleep(10)
         """This method is for scrolling the page, it does so by comparing the scrolled 
             height to the page height, if not equal, it scrolls some more until scrolled 
